@@ -22,7 +22,7 @@ jobs:
         pip install -r requirements.txt
     - name: Analysing the code with pylint
       run: |
-        pylint $(find . -name "*.py" | xargs) --disable=W0612,C0103,R0201,I1101,C0415 || pylint-exit $?
+        pylint $(find . -name "*.py" | xargs) --disable=W0612,C0103,R0201,I1101,C0415,E0611 || pylint-exit $?
         if [ $? -ne 0 ]; then
           echo "An error occurred while running pylint." >&2
           exit 1
