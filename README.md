@@ -6,7 +6,7 @@ This is a small GUI application for loading diffraction images and pyFAI's poni 
 
 ## installation
 
-The package can be installed with `pip install git+https://github.com/kremeyer/py_PoniView`
+The package can be installed with `pip install git+https://github.com/kremeyer/py_PoniView --no-binary=:all:`
 and uninstalled with `pip uninstall PoniView`.
 
 ## usage
