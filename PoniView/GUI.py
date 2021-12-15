@@ -134,6 +134,9 @@ class PoniView(QtWidgets.QMainWindow):
 
 
 def run():
+    """
+    main function to run the application
+    """
     from argparse import ArgumentParser
     import sys
     import ctypes

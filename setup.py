@@ -1,3 +1,7 @@
+"""
+package setup
+"""
+
 from setuptools import setup, find_packages
 
 setup(
@@ -10,5 +14,6 @@ setup(
     license='',
     author='Laurenz Kremeyer',
     author_email='laurenz.kremeyer@mail.mcgill.ca',
-    description='small gui application capable of loading diffraction images, alongside pyFAI poni files'
+    description='small gui application capable of loading diffraction images,'
+                'alongside pyFAI poni files'
 )
