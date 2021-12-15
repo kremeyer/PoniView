@@ -5,6 +5,7 @@ setup(
     version='0.1',
     packages=find_packages(),
     include_package_data=True,
+    install_requires=['numpy', 'pyqtgraph', 'PyQt5', 'pyFAI', 'Pillow'],
     url='https://github.com/kremeyer/py_PoniView',
     license='',
     author='Laurenz Kremeyer',
