@@ -20,4 +20,4 @@ jobs:
         pip install pylint
     - name: Analysing the code with pylint
       run: |
-        pylint `ls -R|grep .py$|xargs`
+        pylint `ls -R|grep .py$|xargs` --disable=W0612,C0103,R0201,I1101,C0415
