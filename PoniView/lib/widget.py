@@ -2,7 +2,7 @@
 module containing widget(s)
 """
 import pyqtgraph as pg
-from numpy import NaN
+from numpy import NaN, nanpercentile
 from PyQt5.QtCore import pyqtSignal
 
 
@@ -26,6 +26,9 @@ class MainPlot(pg.ImageView):
                                     rateLimit=60, slot=self.__callback_move)
         self.setColorMap(pg.colormap.get('inferno'))
         self.view.invertY(True)
+
+    def setImage(self, *args, **kwargs):
+        super().setImage(*args, **kwargs, levels=(nanpercentile(args[0], 0.1), nanpercentile(args[0], 99.5)))
 
     def __callback_move(self, evt):
         """
