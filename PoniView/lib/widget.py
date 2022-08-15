@@ -25,6 +25,7 @@ class MainPlot(pg.ImageView):
         self.proxy = pg.SignalProxy(self.scene.sigMouseMoved,
                                     rateLimit=60, slot=self.__callback_move)
         self.setColorMap(pg.colormap.get('inferno'))
+        self.view.invertY(True)
 
     def __callback_move(self, evt):
         """
@@ -40,4 +41,4 @@ class MainPlot(pg.ImageView):
         if y < 0 or y >= self.y_size:
             self.cursor_changed.emit((NaN, NaN))
             return
-        self.cursor_changed.emit((x, y))
+        self.cursor_changed.emit((x, self.y_size-y-1))
